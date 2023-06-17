@@ -1,0 +1,203 @@
+/* # =================================================================
+   # HEADER
+   # ================================================================= */
+
+.header-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  margin-bottom: 10vw;
+  min-height: 800px;
+}
+
+@media screen and (max-width: 550px) {
+  .header-bg {
+    width: calc(100% - 100px);
+    min-height: 480px;
+  }
+}
+.identity a {
+  position: absolute;
+  right: 1.5em;
+  top: 150px;
+  font-family: var(--secondary-font);
+  font-size: var(--font-xl);
+  color: var(--primary-color-a);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.page-id-2 .identity a {
+  top: 550px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-bg {
+    min-height: 206px;
+    margin-bottom: 62px;
+  }
+
+  .identity a {
+    right: 0.5em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-bg {
+    min-height: 300px;
+    margin-bottom: 15px;
+  }
+
+  .identity a {
+    position: relative;
+    top: inherit;
+    margin-bottom: 100px;
+  }
+
+  .page-id-2 .identity a {
+    position: absolute;
+    top: 330px;
+    margin-bottom: 0;
+  }
+}
+/* # =================================================================
+     # HOME
+     # ================================================================= */
+
+.top-lead {
+  position: absolute;
+  top: 150px;
+  right: 7.5%;
+  font-family: var(--secondary-font);
+  font-size: var(--font-lm);
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.pc-none-2 {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .top-lead {
+    right: 6%;
+  }
+  .pc-none-2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 790px) {
+  .top-lead {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .top-lead {
+    right: 4%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .top-lead {
+    font-size: 16px;
+    top: 90px;
+    right: 20px;
+  }
+}
+
+.top-lead span {
+  display: block;
+  letter-spacing: 0.5em;
+  white-space: nowrap;
+}
+
+.top-lead span:nth-child(2) {
+  margin-top: 1.5em;
+}
+
+#top-lead-area {
+  /* background: url(img/bg_border.svg) no-repeat center top; */
+}
+
+.top-lead-block {
+  font-family: var(--secondary-font);
+  padding-left: 5%;
+  font-size: var(--font-lm);
+  line-height: 2;
+}
+
+@media screen and (max-width: 767px) {
+  #top-lead-area {
+    padding-bottom: 100px;
+  }
+
+  .top-lead-block {
+    text-align: center;
+    font-size: var(--font-m);
+    padding: 0 0 50px 0;
+  }
+
+  .top-lead-block .wd30 {
+    width: 60%;
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .top-lead-block {
+    padding: 70px 0 0 0;
+  }
+}
+/* blur */
+
+.blur{
+  animation-name:blurAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes blurAnime{
+  from {
+  filter: blur(10px);
+  transform: scale(1.02);
+        opacity: 0;
+  }
+
+  to {
+  filter: blur(0);
+  transform: scale(1);
+        opacity: 1;
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.blurTrigger,
+.fadeDownTrigger,
+.fadeInTrigger,
+.fadeUpTrigger,
+.flipLeftTrigger {
+  opacity: 0;
+}
+/* fadeDown */
+
+.fadeDown {
+  animation-name: fadeDownAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
