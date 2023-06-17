@@ -1,14 +1,9 @@
-import './App.css'
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
 
-// import SliderContinuousPage from '@/Ryan/pages/slider-continuous-page'
+const App: React.FC = () => {
+  const element = useRoutes(routes);
+  return element;
+};
 
-function App() {
-
-  return (
-    <>
-      {/* <SliderContinuousPage /> */}
-    </>
-  )
-}
-
-export default App
+export default App;
