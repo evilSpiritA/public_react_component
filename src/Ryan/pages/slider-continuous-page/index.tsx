@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import SliderContinuous from '@/Ryan/components/slider-continuous'
 
 const SliderContinuousPage = () => {
-    const [data] = useState(
-        [
+    const data = [
             {
                 index: 0,
                 bgImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
@@ -29,7 +27,7 @@ const SliderContinuousPage = () => {
                 bgImg: 'https://images.unsplash.com/photo-1617141636403-f511e2d5dc17?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxODAzMjc4Mw&ixlib=rb-1.2.1&q=75w=1920',
                 displayText: 'そのときの気分に合わせて'
             },
-        ])
+        ]
 
     return (
         <>
