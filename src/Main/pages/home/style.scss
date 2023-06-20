@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'ChenYuluoyan';
+    src: url('../../assets/fonts/ChenYuluoyan-Thin-Monospaced.ttf') format("truetype");
+  }
+$color1: #DF285780;
+$color2: #126bae80;
+
+.homeWrapper {
+    font-family: ChenYuluoyan !important;  
+    display: flex;
+    margin: 50px;
+    overflow: hidden;
+
+    .leftWrapper,
+    .rightWrapper {
+        display: flex;
+        flex: 1;
+        height: 0;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+    }
+
+    .leftWrapper {
+        left: 0;
+        border-top: 90vh solid $color1;
+        border-right: 20vw solid transparent;
+    }
+
+    .rightWrapper {
+        right: 0;
+        border-bottom: 90vh solid $color2;
+        border-left: 20vw solid transparent;
+    }
+
+    span {
+        position: absolute;
+        font-size: 80px;
+        color: white;
+    }
+
+    .leftFont {
+        position: absolute;
+        top: -50vh;
+        right: 25vh;
+        transition: all 0.5s ease;
+    }
+
+    .rightFont {
+        position: absolute;
+        top: 50vh;
+        transition: all 0.5s ease;
+    }
+
+
+    .leftWrapper:hover,
+    .rightWrapper:hover {
+        flex: 5;
+        transform: scale(1.5);
+    }
+
+    .leftWrapper:hover {
+        .leftFont {
+            right: 10vh;
+        }
+    }
+
+    .leftWrapper:not(:hover),
+    .rightWrapper:not(:hover) {
+        opacity: .7;
+    }
+
+}
