@@ -13,7 +13,7 @@ gsap.registerPlugin(Observer);
 const SliderContinuous: React.FC<ItemProps> = ({ propsData }) => {
     propsData = propsData.sort((a, b) => { return a.index < b.index ? -1 : a.index > b.index ? 1 : 0 });
 
-    let _tmp = propsData.map(ele => {
+    const _tmp = propsData.map(ele => {
         return (
             <section key={ele.index}>
                 <div className="outer">
@@ -31,16 +31,16 @@ const SliderContinuous: React.FC<ItemProps> = ({ propsData }) => {
 
     // gsap animation
     useLayoutEffect(() => {
-        let sections = document.querySelectorAll("section"),
+        const sections = document.querySelectorAll("section"),
             images = document.querySelectorAll(".bg"),
             headings = gsap.utils.toArray(".section-heading"),
             outerWrappers = gsap.utils.toArray(".outer"),
             innerWrappers = gsap.utils.toArray(".inner"),
             splitHeadings: any = headings.map((heading: any) => new SplitType(heading, { types: 'words, chars', lineClass: "clip-text" })),
-            currentIndex = -1,
-            wrap = gsap.utils.wrap(0, sections.length),
-            animating: any;
+            wrap = gsap.utils.wrap(0, sections.length);
 
+        let currentIndex = -1,
+            animating: boolean;
 
         gsap.set(outerWrappers, { yPercent: 100 });
         gsap.set(innerWrappers, { yPercent: -100 });
@@ -49,7 +49,7 @@ const SliderContinuous: React.FC<ItemProps> = ({ propsData }) => {
             index = wrap(index); // make sure it's valid
 
             animating = true;
-            let fromTop = direction === -1,
+            const fromTop = direction === -1,
                 dFactor = fromTop ? -1 : 1,
                 tl = gsap.timeline({
                     defaults: { duration: 1.25, ease: "power1.inOut" },

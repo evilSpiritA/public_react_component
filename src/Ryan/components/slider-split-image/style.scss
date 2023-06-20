@@ -2,6 +2,7 @@ html,
 body {
     overflow: hidden;
     font-family: "Sen";
+
 }
 
 .wrapper {
@@ -23,6 +24,7 @@ body {
                 height: 100vh;
                 position: relative;
                 overflow: hidden;
+                max-height: -webkit-fill-available; // for ios mobile
 
                 img {
                     width: 100vw;
