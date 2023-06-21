@@ -77,7 +77,6 @@ const HomePage: React.FC = () => {
           <div className="right-layer-3"></div>
         </div>
 
-
         <div className="mainWrapper">
           <div id="SEAN" className="leftWrapper fadeInLTR" onClick={changePage}>
             <div className="leftFont">

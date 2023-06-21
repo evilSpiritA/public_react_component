@@ -11,6 +11,7 @@ $animationDelayTime:2.5s;
 .homeWrapper {
     font-family: ChenYuluoyan !important;
     height: 100vh;
+    overflow: hidden;
 
     .mainWrapper {
         height: 100vh;
@@ -32,12 +33,10 @@ $animationDelayTime:2.5s;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-
         .leftWrapper {
             left: 0;
             border-top: 100vh solid $color1;
             border-right: 12vw solid transparent;
-
         }
 
         .rightWrapper {
@@ -65,7 +64,6 @@ $animationDelayTime:2.5s;
             transition: all 0.5s ease;
         }
 
-
         .leftWrapper:not(.expanded):hover,
         .rightWrapper:not(.expanded):hover {
             flex: 5;
@@ -75,7 +73,6 @@ $animationDelayTime:2.5s;
         &:hover>.rightWrapper:not(.expanded, :hover) {
             opacity: .5;
         }
-
 
         .fadeInLTR {
             transform: translate3d(-100%, 0, 0);
@@ -115,7 +112,6 @@ $animationDelayTime:2.5s;
 
             -webkit-animation-delay: $animationDelayTime;
             animation-delay: $animationDelayTime;
-
         }
 
     }
@@ -138,7 +134,6 @@ $animationDelayTime:2.5s;
             radial-gradient(at 75% 74%, hsla(344, 74%, 51%, 0.5019607843137255) 0px, transparent 50%),
             radial-gradient(at 24% 28%, hsla(205, 81%, 37%, 0.5019607843137255) 0px, transparent 50%);
     }
-
 
     .left-layer,
     .left-layer-1,
@@ -179,8 +174,6 @@ $animationDelayTime:2.5s;
         }
     }
 
-
-
     .right-layer,
     .right-layer-1,
     .right-layer-2,
@@ -219,8 +212,6 @@ $animationDelayTime:2.5s;
             }
         }
     }
-
-
 }
 
 //#region [animate_fadeInLTR]

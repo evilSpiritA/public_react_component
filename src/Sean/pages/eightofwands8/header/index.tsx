@@ -3,11 +3,11 @@ import "./style.scss";
 
 type ItemProps = {
   headerProps: { index: number; bgImg: string; displayText: Array<string> }[];
-  navProps:{}
+  navProps?: { index?: number }[];
 };
 
-const Header: React.FC<ItemProps> = ({ headerProps,navProps }) => {
-  let _tmp = headerProps.map(ele => {
+const Header: React.FC<ItemProps> = ({ headerProps, navProps }) => {
+  const _tmp = headerProps.map((ele) => {
     return (
       <>
         <div
@@ -28,11 +28,7 @@ const Header: React.FC<ItemProps> = ({ headerProps,navProps }) => {
       </>
     );
   });
-  return (
-    <>
-      {_tmp}
-    </>
-  )
+  return <>{_tmp}</>;
 };
 
 export default Header;
