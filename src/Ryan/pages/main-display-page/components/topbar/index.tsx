@@ -12,7 +12,6 @@ const Topbar: React.FC = () => {
                 <div className={styles.wrapper}>
                     <div className={styles.topLeft}>
                         <button className={clsx(styles.backBtn)} onClick={() => navigate(-1)}>
-                            <span> - </span>
                             <span>Back</span>
                         </button>
                         <Link to='/MainDisplayPage' className={styles.Link} >
