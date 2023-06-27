@@ -2,15 +2,18 @@
     font-family: ChenYuluoyan !important;
     background-image: linear-gradient(#f3e7e9 0%, #bfd3d6 30%, #70a2ac 100%);
     min-width: 350px;
+    min-height: 90vh;
 
     .contents {
+        min-height: 85vh;
+
         .contentTitle span {
             position: relative;
             margin-left: 30px;
             font-size: 52px;
             letter-spacing: 10px;
             color: transparent;
-            animation: fill-text-color 1.2s 1s forwards;
+            animation: fill-text-color-black 1.2s 1s forwards;
 
             &::before {
                 position: absolute;

@@ -2,7 +2,7 @@
     --card-bg-color: #95a3ac;
     --card-bg-color-transparent: #efe2dd;
     position: relative;
-    width: 350px;
+    width: 250px;
 
     .card-borders {
         position: absolute;
@@ -75,8 +75,8 @@
         .pageImg {
             position: relative;
             object-fit: cover;
-            width: 200px;
-            height: 200px;
+            width: 125px;
+            height: 125px;
             border-radius: 10px;
             margin: 10px 0;
             opacity: 0;
@@ -86,9 +86,10 @@
 
         .title {
             position: relative;
-            font-size: 24px;
+            font-size: 20px;
+            font-weight:bold;
             color: transparent;
-            animation: fill-text-color 1.2s 2s forwards;
+            animation: fill-text-color-black 1.2s 2s forwards;
 
             &::before {
                 position: absolute;
@@ -106,10 +107,11 @@
 
         .description {
             position: relative;
-            font-size: 18px;
-            margin: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 10px;
             color: transparent;
-            animation: fill-text-color 1.4s 2s forwards;
+            animation: fill-text-color-gray 1.4s 2s forwards;
             word-break: break-all;
 
             &::before {
@@ -263,11 +265,18 @@
     }
 }
 
-@keyframes fill-text-color {
+@keyframes fill-text-color-black {
     to {
         color: black;
     }
 }
+
+@keyframes fill-text-color-gray {
+    to {
+        color: gray;
+    }
+}
+
 
 @keyframes scale-in {
     to {
