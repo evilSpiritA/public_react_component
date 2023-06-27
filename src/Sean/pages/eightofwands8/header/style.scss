@@ -17,6 +17,13 @@
     min-height: 480px;
   }
 }
+// @media screen and (max-width: 550px) {
+//   .page-id-2 .header-bg {
+//     width: calc(100% - 100px);
+//     min-height: 480px;
+//     background-image: url(img/sp-top.jpg);
+//   }
+// }
 .identity a {
   position: absolute;
   right: 1.5em;
@@ -29,8 +36,11 @@
   line-height: 1.5;
 }
 
-.page-id-2 .identity a {
-  top: 550px;
+// .page-id-2 .identity a {
+//   top: 550px;
+// }
+.identity a {
+  top: 500px;
 }
 
 @media screen and (max-width: 767px) {
@@ -45,18 +55,26 @@
 }
 
 @media screen and (max-width: 550px) {
+  // .header-bg {
+  //   min-height: 300px;
+  //   margin-bottom: 15px;
+  // }
   .header-bg {
-    min-height: 300px;
-    margin-bottom: 15px;
+    width: calc(100% - 100px);
+    min-height: 480px;
   }
-
   .identity a {
     position: relative;
     top: inherit;
     margin-bottom: 100px;
   }
 
-  .page-id-2 .identity a {
+  // .page-id-2 .identity a {
+  //   position: absolute;
+  //   top: 330px;
+  //   margin-bottom: 0;
+  // }
+  .identity a {
     position: absolute;
     top: 330px;
     margin-bottom: 0;
@@ -153,26 +171,27 @@
 }
 /* blur */
 
-.blur{
-  animation-name:blurAnime;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
-    opacity: 0;
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-@keyframes blurAnime{
+@keyframes blurAnime {
   from {
-  filter: blur(10px);
-  transform: scale(1.02);
-        opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
   }
 
   to {
-  filter: blur(0);
-  transform: scale(1);
-        opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
 .blurTrigger,
 .fadeDownTrigger,
@@ -194,6 +213,26 @@
   from {
     opacity: 0;
     transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* fadeUp */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
   }
 
   to {

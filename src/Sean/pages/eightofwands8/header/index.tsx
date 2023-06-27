@@ -1,15 +1,21 @@
 import Navbar from "../../../components/eightofwands8/navbar";
 import "./style.scss";
+import {headerData,titleText,navData} from "./header";
 
-type ItemProps = {
-  headerProps: { index: number; bgImg: string; displayText: Array<string> }[];
-  navProps:{}
-};
-
-const Header: React.FC<ItemProps> = ({ headerProps,navProps }) => {
-  let _tmp = headerProps.map(ele => {
+const Header: React.FC = () => {
+  let title = (
+    <>
+      <h1 className="identity txt-right">
+        <a className="d-block fadeUpTrigger fadeUp" href="/">
+          <span className="d-block font-s">{titleText.subtitle}</span> 
+          {titleText.title}
+        </a>
+      </h1>
+    </>
+  );
+  let _tmp = headerData.map((ele) => {
     return (
-      <>
+      <> 
         <div
           className="header-bg fadeDownTrigger fadeDown"
           style={{
@@ -24,15 +30,12 @@ const Header: React.FC<ItemProps> = ({ headerProps,navProps }) => {
           <span>{ele.displayText[0]}</span>
           <span>{ele.displayText[1]}</span>
         </p>
-        <Navbar />
+        {title}
+        <Navbar navProps={navData}/>
       </>
     );
   });
-  return (
-    <>
-      {_tmp}
-    </>
-  )
+  return <>{_tmp}</>;
 };
 
 export default Header;

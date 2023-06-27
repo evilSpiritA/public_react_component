@@ -1,10 +1,28 @@
 import { useState } from "react";
 import clsx from "clsx";
 import "./style.scss";
-
-const Navbar: React.FC = () => {
+type navProps = {
+  navProps: {
+    index: number;
+    href: string;
+    title: string;
+    subtitle: string;
+  }[];
+};
+const Navbar: React.FC<navProps> = ({ navProps }) => {
   const [btnState, setBtnstate] = useState(false);
-
+  let _tmp = navProps.map((ele) => {
+    if (ele.index != 0) {
+      return (
+        <li>
+          <a href={ele.href}>
+            <span className="block">{ele.subtitle}</span>
+            {ele.title}
+          </a>
+        </li>
+      );
+    }
+  });
   return (
     <>
       <div
@@ -18,56 +36,18 @@ const Navbar: React.FC = () => {
         <span></span>
       </div>
       <nav>
-        <div
-          id="g-nav"
-          className={clsx({ ["panelactive"]: btnState })}
-        >
+        <div id="g-nav" className={clsx({ ["panelactive"]: btnState })}>
           <div
             id="g-nav-list"
             className="flex flex-wrap align-items-center justify-between"
           >
             <div className="wd40 txt-center">
               <p className="nav-heading">
-                <a href="/">eight of wands</a>
+                <a href="/">{navProps[0].title}</a>
               </p>
-              <p className="font-s">素顔のあなたを見つけるサロン</p>
+              <p className="font-s">{navProps[0].subtitle}</p>
             </div>
-            <ul className="wd60 pr-20">
-              <li>
-                <a href="/">
-                  <span className="block">top</span>トップ
-                </a>
-              </li>
-              <li>
-                <a href="/menu/">
-                  <span className="block">menu</span>施術メニュー
-                </a>
-              </li>
-              <li>
-                <a href="/faq/">
-                  <span className="block">faq</span>よくあるご質問
-                </a>
-              </li>
-              <li>
-                <a href="/blog/">
-                  <span className="block">blog</span>ブログ
-                </a>
-              </li>
-              <li>
-                <a href="/contact/">
-                  <span className="block">contact</span>ご予約・お問い合わせ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/eri_asaioo"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span className="block">instagram</span>インスタグラム
-                </a>
-              </li>
-            </ul>
+            <ul className="wd60 pr-20">{_tmp}</ul>
           </div>
         </div>
       </nav>
