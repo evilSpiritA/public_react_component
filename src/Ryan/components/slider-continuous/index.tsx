@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { useLayoutEffect } from "react";
 import SplitType from "split-type";
+import { c_objSort } from "@/Ryan/utils";
 
 type T_ItemProps = {
   propsData: { index: number; bgImg: string; displayText: string }[];
@@ -11,9 +12,7 @@ type T_ItemProps = {
 gsap.registerPlugin(Observer);
 
 const SliderContinuous: React.FC<T_ItemProps> = ({ propsData }) => {
-  propsData = propsData.sort((a, b) => {
-    return a.index < b.index ? -1 : a.index > b.index ? 1 : 0;
-  });
+  propsData = c_objSort(propsData, "index");
 
   const _tmp = propsData.map((ele) => {
     return (

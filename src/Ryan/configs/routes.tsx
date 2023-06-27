@@ -1,8 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from 'react';
 
 const MainDisplayPage = React.lazy(() => import('@/Ryan/pages/main-display-page'));
 const SliderContinuousPage = React.lazy(() => import('@/Ryan/pages/slider-continuous-page'));
 const SliderSplitImagePage = React.lazy(() => import('@/Ryan/pages/slider-split-image-page'));
+const ExpandingFlexCardsPage = React.lazy(() => import('@/Ryan/pages/expanding-flex-cards-page'));
 
 export const ryanRoutes: T_ryanRoutes[] = [
   {
@@ -37,10 +39,10 @@ export const ryanRoutes: T_ryanRoutes[] = [
       },
       {
         index: 3,
-        title: "For Test",
-        description: "For Test Page description",
-        href: "#",
-        // element: <SliderContinuousPage />,
+        title: "Expanding Flex Cards Page",
+        description: "Expanding Flex Cards Page description",
+        href: "/ExpandingFlexCardsPage",
+        element: <ExpandingFlexCardsPage />,
         displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
       },
       {

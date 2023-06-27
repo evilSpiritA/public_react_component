@@ -1,64 +1,66 @@
 import "./style.scss";
-import { ryanRoutes, portfolioPath, I_children } from '@/Ryan/configs/routes';
-
+import { ryanRoutes, portfolioPath, I_children } from "@/Ryan/configs/routes";
 import DisplayEle from "./components/display-ele";
 import Topbar from "./components/topbar";
 import Footer from "./components/footer";
+import { c_objSort } from "@/Ryan/utils";
 
 const MainDisplayPage: React.FC = () => {
-    let data: I_children[] = [];
-    const _res = ryanRoutes.find(ele => ele.treeHeader == 'customersComponent');
-    if (_res != null) { data = _res.treeChildren }
-    data = data.sort((a, b) => {
-        return a.index < b.index ? -1 : a.index > b.index ? 1 : 0;
-    })
+  let data: I_children[] = [];
+  const _res = ryanRoutes.find((ele) => ele.treeHeader == "customersComponent");
+  if (_res != null) {
+    data = _res.treeChildren;
+  }
 
-    const customersComponent = data.map((ele) => {
-        return (
-            <div className="cardEle" key={ele.index}>
-                <DisplayEle propsData={ele} />
-            </div>
-        )
-    })
+  data = c_objSort(data, "index");
 
-    const portfolioComponent = portfolioPath.map((ele) => {
-        return (
-            <div className="cardEle" key={ele.index}>
-                <DisplayEle propsData={ele} target={"_blank"} />
-            </div>
-        )
-    })
-
-
+  const customersComponent = data.map((ele) => {
     return (
-        <>
-            <div className="MainDisplayWrapper">
-                <Topbar />
-                <div className="contents">
+      <div className="cardEle" key={ele.index}>
+        <DisplayEle propsData={ele} />
+      </div>
+    );
+  });
 
-                    <div className="content">
-                        <div className="contentTitle">
-                            <span>Portfolios</span>
-                        </div>
-                        <div className="contentElement">
-                            {portfolioComponent}
-                        </div>
-                    </div>
+  const portfolioComponent = portfolioPath.map((ele) => {
+    return (
+      <div className="cardEle" key={ele.index}>
+        <DisplayEle propsData={ele} target={"_blank"} />
+      </div>
+    );
+  });
 
-                    <div className="content">
-                        <div className="contentTitle">
-                            <span>Components</span>
-                        </div>
-                        <div className="contentElement">
-                            {customersComponent}
-                        </div>
-                    </div>
+  const contentData: T_contentData[] = [
+    { index: 0, title: "Portfolios", element: portfolioComponent },
+    { index: 1, title: "Components", element: customersComponent },
+  ];
 
-                </div>
-                <Footer />
-            </div>
-        </>
-    )
-}
+  const contentElement = contentData.map((ele: T_contentData) => {
+    return (
+      <div className="content" key={ele.index}>
+        <div className="contentTitle">
+          <span>{ele.title}</span>
+        </div>
+        <div className="contentElement">{ele.element}</div>
+      </div>
+    );
+  });
 
-export default MainDisplayPage
+  return (
+    <>
+      <div className="MainDisplayWrapper">
+        <Topbar />
+        <div className="contents">{contentElement}</div>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default MainDisplayPage;
+
+type T_contentData = {
+  index: number;
+  title: string;
+  element: JSX.Element[];
+};

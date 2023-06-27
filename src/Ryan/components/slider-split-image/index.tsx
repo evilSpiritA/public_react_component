@@ -2,6 +2,7 @@ import "./style.scss";
 import React, { useLayoutEffect } from "react";
 import { gsap, Power4 } from "gsap";
 import { Observer } from "gsap/Observer";
+import { c_objSort } from "@/Ryan/utils";
 
 type T_ItemProps = {
   propsData: { index: number; bgImg: string; displayText: string }[];
@@ -24,10 +25,7 @@ const SliderSplitImage: React.FC<T_ItemProps> = ({
   isBtn = true,
   isBotDesc = true,
 }) => {
-  propsData = propsData.sort((a, b) => {
-    return a.index < b.index ? -1 : a.index > b.index ? 1 : 0;
-  });
-  
+  propsData = c_objSort(propsData, "index");
   const parts: any = [];
   let current = 0;
   let playing = false;
