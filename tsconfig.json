@@ -5,6 +5,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "allowJs": true,
+    "types": ["vite/client", "node", "jest", "@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -31,6 +32,6 @@
     "forceConsistentCasingInFileNames": true,
 
   },
-  "include": ["src"],
+  "include": ["src", "jest.setup.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
