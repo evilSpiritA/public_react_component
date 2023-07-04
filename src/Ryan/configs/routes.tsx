@@ -1,10 +1,22 @@
 /* eslint-disable react-refresh/only-export-components */
-import React from 'react';
+import React from "react";
 
-const MainDisplayPage = React.lazy(() => import('@/Ryan/pages/main-display-page'));
-const SliderContinuousPage = React.lazy(() => import('@/Ryan/pages/slider-continuous-page'));
-const SliderSplitImagePage = React.lazy(() => import('@/Ryan/pages/slider-split-image-page'));
-const ExpandingFlexCardsPage = React.lazy(() => import('@/Ryan/pages/expanding-flex-cards-page'));
+const MainDisplayPage = React.lazy(
+  () => import("@/Ryan/pages/main-display-page")
+);
+const SliderContinuousPage = React.lazy(
+  () => import("@/Ryan/pages/slider-continuous-page")
+);
+const SliderSplitImagePage = React.lazy(
+  () => import("@/Ryan/pages/slider-split-image-page")
+);
+const ExpandingFlexCardsPage = React.lazy(
+  () => import("@/Ryan/pages/expanding-flex-cards-page")
+);
+
+import ThreeFiberShirtImg from "@/Ryan/assets/routeImg/ThreeFiberShirt.png";
+import ScrollTriggerExciseImg from "@/Ryan/assets/routeImg/ScrollTriggerExcise.png";
+import Webgl3dTextImg from "@/Ryan/assets/routeImg/Webgl3dText.png";
 
 export const ryanRoutes: T_ryanRoutes[] = [
   {
@@ -27,7 +39,8 @@ export const ryanRoutes: T_ryanRoutes[] = [
         description: "Slider Continuous Page description",
         href: "/SliderContinuousPage",
         element: <SliderContinuousPage />,
-        displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
+        displayImg:
+          "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
       },
       {
         index: 2,
@@ -35,7 +48,8 @@ export const ryanRoutes: T_ryanRoutes[] = [
         description: "Slider Split Image Page description",
         href: "/SliderSplitImagePage",
         element: <SliderSplitImagePage />,
-        displayImg: 'https://images.unsplash.com/photo-1617128734662-66da6c1d3505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzc3NTM3MA&ixlib=rb-1.2.1&q=75&w=1920',
+        displayImg:
+          "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
       },
       {
         index: 3,
@@ -43,12 +57,12 @@ export const ryanRoutes: T_ryanRoutes[] = [
         description: "Expanding Flex Cards Page description",
         href: "/ExpandingFlexCardsPage",
         element: <ExpandingFlexCardsPage />,
-        displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
+        displayImg:
+          "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
       },
     ],
   },
-
-]
+];
 
 export const portfolioPath: I_children[] = [
   {
@@ -56,24 +70,23 @@ export const portfolioPath: I_children[] = [
     title: "Three fiber shirt",
     description: "three-fiber-shirt description",
     href: "https://three-fiber-shirt.vercel.app/",
-    displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
+    displayImg: ThreeFiberShirtImg,
   },
   {
     index: 2,
     title: "Scroll trigger excise",
     description: "scroll-trigger-excise description",
     href: "https://scroll-trigger-excise.vercel.app/",
-    displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
-  }
-  ,
+    displayImg: ScrollTriggerExciseImg,
+  },
   {
     index: 3,
     title: "webgl 3d text",
     description: "webgl-3d-text description",
     href: "https://webgl-3d-text-blue-ten.vercel.app/",
-    displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
-  }
-]
+    displayImg: Webgl3dTextImg,
+  },
+];
 
 const ryanRoutesFormatted = ryanRoutes.map((item: any) => {
   return {
@@ -88,12 +101,14 @@ const ryanRoutesFormatted = ryanRoutes.map((item: any) => {
   };
 });
 
-export const ryanRoutesArray = ryanRoutesFormatted.flatMap((item: any) => item.treeChildren);
+export const ryanRoutesArray = ryanRoutesFormatted.flatMap(
+  (item: any) => item.treeChildren
+);
 
 type T_ryanRoutes = {
   treeHeader: string;
-  treeChildren: I_treeChildren[]
-}
+  treeChildren: I_treeChildren[];
+};
 
 export interface I_children {
   index: number;
