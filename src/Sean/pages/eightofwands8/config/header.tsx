@@ -29,31 +29,31 @@ export const navData = [
   {
     index:2,
     href:"/menu",
-    title:"menu",
-    subtitle:"施術メニュー"
+    title:"施術メニュー",
+    subtitle:"menu"
   },
   {
     index:3,
     href:"/faq",
-    title:"faq",
-    subtitle:"よくあるご質問"
+    title:"よくあるご質問",
+    subtitle:"faq"
   },
   {
     index:4,
     href:"/blog",
-    title:"blog",
-    subtitle:"ブログ"
+    title:"ブログ",
+    subtitle:"blog"
   },
   {
     index:5,
     href:"/contact",
-    title:"contact",
-    subtitle:"ご予約・お問い合わせ"
+    title:"ご予約・お問い合わせ",
+    subtitle:"contact"
   },
   {
     index:6,
     href:"https://instagram.com/eri_asaioo",
-    title:"instagram",
-    subtitle:"インスタグラム"
+    title:"インスタグラム",
+    subtitle:"instagram"
   },
 ];

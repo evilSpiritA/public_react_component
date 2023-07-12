@@ -1,21 +1,21 @@
 import Navbar from "../../../components/eightofwands8/navbar";
 import "./style.scss";
-import {headerData,titleText,navData} from "./header";
-
+import { headerData, titleText, navData } from "../config/header";
 const Header: React.FC = () => {
   let title = (
     <>
       <h1 className="identity txt-right">
         <a className="d-block fadeUpTrigger fadeUp" href="/">
-          <span className="d-block font-s">{titleText.subtitle}</span> 
+          <span className="d-block font-s">{titleText.subtitle}</span>
           {titleText.title}
         </a>
       </h1>
     </>
   );
-  let _tmp = headerData.map((ele) => {
+
+  const _tmp = headerData.map((ele: any) => {
     return (
-      <> 
+      <section key={ele.index}>
         <div
           className="header-bg fadeDownTrigger fadeDown"
           style={{
@@ -31,8 +31,8 @@ const Header: React.FC = () => {
           <span>{ele.displayText[1]}</span>
         </p>
         {title}
-        <Navbar navProps={navData}/>
-      </>
+        <Navbar navProps={navData} />
+      </section>
     );
   });
   return <>{_tmp}</>;

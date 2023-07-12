@@ -1,0 +1,242 @@
+.thumbnailArea {
+  margin: 0 0 30px;
+}
+
+.thumbnailArea.reco {
+  margin: 0 0 80px;
+}
+
+.aboutInfoArea {
+  text-align: center;
+  margin: 0 0 60px;
+  box-sizing: border-box;
+}
+h2.aboutInfo-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .45em;
+  line-height: 2;
+  padding: 1em 0;
+  margin: 0 0 1em;
+  // position: relative;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  // display: inline-block;
+}
+h2.aboutInfo-title.b_gray {
+  border-top: 4px solid #f3f3f3;
+  border-bottom: 4px solid #f3f3f3
+}
+h2.aboutInfo-title:first-letter {
+  font-size: 1.7em;
+  line-height: 1
+}
+.thumbnailArea-title {
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 65px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px dashed #5e5e5e;
+  padding: 0 25px 10px;
+  display: inline-block;
+}
+
+.thumbnail-inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .thumbnail-list {
+    width: 32%;
+    margin: 0 0 20px;
+    box-shadow: 0 0 4px 1px rgba(113, 135, 164, 0.12);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 0 0 0px 5px #ffb79f;
+    }
+  }
+  .thumbnail-imgBox {
+    a {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: center;
+      backface-visibility: hidden;
+      border-radius: 6px 6px 0 0;
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+        transform: scale(1);
+        transition: .5s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+// .thumbnail-inner:before {
+//   content: "";
+//   display: block;
+//   width: 32%;
+//   order: 1;
+// }
+
+.thumbnail-inner .thumbnail-imgBox .topics-list__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 5px solid #333;
+  border-bottom: 5px solid #333;
+  transition: 0.6s;
+  backface-visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.thumbnail-inner .thumbnail-imgBox:hover .topics-list__bg {
+  opacity: 1;
+}
+
+.thumbnail-inner .thumbnail-imgBox .topics-list__bg p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #111;
+  font-size: 250%;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.thumbnail-inner .thumbnail-textBox {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 0 0 6px 6px;
+}
+
+.thumbnail-inner ul {
+  padding: 17px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.thumbnail-inner ul li {
+  font-size: 12px;
+}
+
+.thumbnail-inner .title {
+  font-size: 14px;
+  padding-top: 5px;
+  flex-grow: 1;
+}
+
+.thumbnail-inner .tags {
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.thumbnail-inner .tags a {
+  margin-right: 10px;
+  color: #607d8b;
+  padding: 0 0.2em;
+  background-color: #fff;
+  border-top: 1px dashed #c4d6d1;
+  border-bottom: 1px dashed #c4d6d1;
+  box-sizing: border-box;
+}
+
+.thumbnail-inner .tags a:last-child {
+  margin-right: 0;
+}
+
+.thumbnail-inner .tags a:before {
+  content: "#";
+  padding-right: 1px;
+}
+
+.thumbnail-inner .key {
+  font-size: 12px;
+  color: #06c;
+  letter-spacing: 0.085em;
+  padding-bottom: 10px;
+}
+
+.thumbnail-inner .time {
+  color: #666;
+  padding-top: 12px;
+}
+
+.thumbnail-inner .summary {
+  padding-top: 5px;
+}
+
+.thumbnail-inner .summary p {
+  font-size: 10px;
+  color: #777;
+  margin: 0;
+}
+
+.thumbnail-inner span a {
+  color: #888;
+  font-weight: 700;
+}
+
+.thumbnail-inner span.webdesign a {
+  color: #315a8c;
+}
+
+.thumbnail-inner span.goods a {
+  color: #94ad73;
+}
+
+.thumbnail-inner span.photo a {
+  color: #e8a48b;
+}
+
+.thumbnail-inner span.video a {
+  color: #ecb100;
+}
+
+.thumbnail-inner span.illustration a {
+  color: #e6de6b;
+}
+
+.thumbnail-inner span.soro a {
+  color: #795548;
+}
+
+.thumbnail-inner span.web a {
+  color: #607d8b;
+}
+
+.thumbnail-inner span.note a {
+  color: #333;
+}

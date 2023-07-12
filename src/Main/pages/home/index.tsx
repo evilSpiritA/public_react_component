@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
       setOpenLeftLayout(true);
       clearMainWrapper();
       setTimeout(() => {
-        navigate("/Eightofwands8")
+        navigate("Sean/MainDisplayPage")
       }, 1000)
     } else if (e.target.id == 'RYAN') {
       setOpenRightLayout(true);

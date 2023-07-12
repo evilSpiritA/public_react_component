@@ -14,7 +14,7 @@ const Navbar: React.FC<navProps> = ({ navProps }) => {
   let _tmp = navProps.map((ele) => {
     if (ele.index != 0) {
       return (
-        <li>
+        <li key={ele.index}>
           <a href={ele.href}>
             <span className="block">{ele.subtitle}</span>
             {ele.title}
