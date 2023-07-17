@@ -5,10 +5,14 @@
     $animationDelayTime: 2.5s;
     font-family: ChenYuluoyan !important;
     height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden !important;
 
     .mainWrapper {
         height: 100vh;
         display: flex;
+        width: 100vw;
         overflow: hidden;
         bottom: 0;
 

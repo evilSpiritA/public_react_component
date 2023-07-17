@@ -2,8 +2,6 @@ import type { RouteObject } from "react-router-dom";
 import HomePage from '@/Main/pages/home'
 import { ryanRoutesArray } from '@/Ryan/configs/routes'
 import {seanRoutesArray} from '@/Sean/configs/routes'
-import Eightofwands8 from "@/Sean/pages/eightofwands8";
-
 
 const routes: RouteObject[] = [
   {

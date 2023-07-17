@@ -1,11 +1,15 @@
 .MainDisplayWrapper {
+    position: relative;
     font-family: ChenYuluoyan !important;
     background-image: linear-gradient(#f3e7e9 0%, #bfd3d6 30%, #70a2ac 100%);
-    min-width: 350px;
-    min-height: 90vh;
-
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+ 
     .contents {
-        min-height: 85vh;
+        width: 100%;
+        min-height: 84vh;
+        max-height: auto;
 
         .contentTitle span {
             position: relative;
@@ -27,7 +31,6 @@
                 transform-origin: left;
                 animation: slide-in-out 1.2s cubic-bezier(0.75, 0, 0, 1) forwards;
             }
-
         }
 
         .contentElement {
