@@ -1,0 +1,22 @@
+  .cardFiddle {
+    font-size: 150px;
+    position: relative;
+    width: 140px;
+    height: 180px;
+    text-align: center;
+    .card__side {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      transition: transform .9s;
+      
+      &.back { transform: rotateY(180deg); }
+    }
+    
+    &:hover .front { transform: rotateY(180deg); }
+    &:hover .back  { transform: rotateY(0); }
+  }
+  
