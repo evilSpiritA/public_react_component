@@ -1,0 +1,30 @@
+.testWrapper{
+  width: 100%;
+    // background-color: bisque;
+  .titleArea {
+    text-align: center;
+    margin: 60px 0;
+    box-sizing: border-box;
+
+    span.aboutInfo-title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: .45em;
+      line-height: 2;
+      padding: 1em 0;
+      // position: relative;
+      border-top: 4px solid #fff;
+      border-bottom: 4px solid #fff;
+      // display: inline-block;
+
+      &.b_gray {
+        border-top: 4px solid #f3f3f3;
+        border-bottom: 4px solid #f3f3f3;
+      }
+      &:first-letter {
+        font-size: 1.7em;
+        line-height: 1;
+      }
+    }
+  }
+}

@@ -10,35 +10,31 @@ const DisplayArea: React.FC<I_propsData> = ({ propsData }) => {
     return (
       <div key={ele.index} className="thumbnail-list">
         <div className="thumbnail-imgBox">
-          <a href={ele.href}>
+          <a href={'/Sean'+ele.href}>
             <img
               src={ele.displayImg}
               className="attachment-large size-large wp-post-image ls-is-cached lazyloaded"
             />
           </a>
         </div>
-        <a href="https://125naroom.com/webdesign/3704">
-          <div className="thumbnail-textBox">
+        <div className="thumbnail-textBox">
+          <a href={'/Sean'+ele.href}>
             <ul>
               <li>
-                <span className="webdesign">
-                  <a href="/">web design</a>
-                </span>
+                <span className="webdesign">web design</span>
               </li>
-              <li className="title">
-                『デザインのこと – Web design gallery』、Webサイトを作りました。
-              </li>
-              <li className="tags">Webデザイン</li>
+              <li className="title">{ele.title}</li>
+              {/* <li className="tags">Webデザイン</li> */}
             </ul>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     );
   });
   return (
     <div className="thumbnailArea">
       <div className="aboutInfoArea">
-        <h2 className="aboutInfo-title b_gray">Componetns</h2>
+        <span className="aboutInfo-title b_gray">Componetns</span>
       </div>
       <div className="thumbnail-inner">{thumbnailList}</div>
     </div>

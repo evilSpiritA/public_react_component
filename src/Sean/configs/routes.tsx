@@ -2,6 +2,7 @@ import React from 'react';
 const MainDisplayPage = React.lazy(() => import('@/Sean/pages/main-display-page'));
 
 const Eightofwands8Page = React.lazy(() => import('@/Sean/pages/eightofwands8'));
+const TestingPage = React.lazy(() => import('@/Sean/pages/testPage'));
 
 
 export const seanRoutes: T_Routes[] = [
@@ -23,23 +24,23 @@ export const seanRoutes: T_Routes[] = [
         index: 1,
         title: "Slider Continuous Page",
         description: "Slider Continuous Page description",
-        href: "/Sean/eightofwands8",
+        href: "/eightofwands8",
         element: <Eightofwands8Page />,
         displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
       },
       {
         index: 2,
-        title: "Slider Continuous Page",
+        title: "Testing Page",
         description: "Slider Continuous Page description",
-        href: "/Sean/eightofwands8",
-        element: <Eightofwands8Page />,
+        href: "/test",
+        element: <TestingPage />,
         displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
       },
       {
         index: 3,
         title: "Slider Continuous Page",
         description: "Slider Continuous Page description",
-        href: "/Sean/eightofwands8",
+        href: "/eightofwands8",
         element: <Eightofwands8Page />,
         displayImg: 'https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920',
       }
