@@ -1,18 +1,12 @@
 /* eslint-disable react-refresh/only-export-components */
 import React from "react";
 
-const MainDisplayPage = React.lazy(
-  () => import("@/Ryan/pages/main-display-page")
-);
-const SliderContinuousPage = React.lazy(
-  () => import("@/Ryan/pages/slider-continuous-page")
-);
-const SliderSplitImagePage = React.lazy(
-  () => import("@/Ryan/pages/slider-split-image-page")
-);
-const ExpandingFlexCardsPage = React.lazy(
-  () => import("@/Ryan/pages/expanding-flex-cards-page")
-);
+const MainDisplayPage = React.lazy(() => import("@/Ryan/pages/main-display-page"));
+const SliderContinuousPage = React.lazy(() => import("@/Ryan/pages/slider-continuous-page"));
+const SliderSplitImagePage = React.lazy(() => import("@/Ryan/pages/slider-split-image-page"));
+const ExpandingFlexCardsPage = React.lazy(() => import("@/Ryan/pages/expanding-flex-cards-page"));
+const CustomBtnPage = React.lazy(() => import("@/Ryan/pages/custom-btn-page"));
+
 
 import ThreeFiberShirtImg from "@/Ryan/assets/routeImg/ThreeFiberShirt.png";
 import ScrollTriggerExciseImg from "@/Ryan/assets/routeImg/ScrollTriggerExcise.png";
@@ -60,6 +54,16 @@ export const ryanRoutes: T_ryanRoutes[] = [
         displayImg:
           "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
       },
+      {
+        index: 4,
+        title: "Custom Btn Page",
+        description: "Custom Btn Page description",
+        href: "/CustomBtnPage",
+        element: <CustomBtnPage />,
+        displayImg:
+          "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
+      },
+      
     ],
   },
 ];

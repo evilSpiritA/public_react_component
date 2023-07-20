@@ -3,7 +3,12 @@ import { clsx } from 'clsx';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Topbar: React.FC = () => {
+type T_ItemProps = {
+    label?: string;
+}
+
+
+const Topbar: React.FC<T_ItemProps> = ({ label }) => {
     const navigate = useNavigate();
 
     return (
@@ -16,7 +21,7 @@ const Topbar: React.FC = () => {
                         </button>
                         <Link to='/MainDisplayPage' className={styles.Link} >
                             <div className={styles.logo}>
-                              Ryan Work Space
+                                {label || 'Ryan Work Space'}
                             </div>
                         </Link>
                     </div>

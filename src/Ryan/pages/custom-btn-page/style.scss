@@ -1,0 +1,45 @@
+.customBtnPageWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    .middleArea {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .displayArea,
+        .selectionArea {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 80%;
+
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            margin: auto 50px;
+        }
+
+        .displayArea {
+            .CustomBtnStyle {
+            }
+        }
+
+        .selectionArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            & > :nth-child(n){
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .title{
+                margin: auto 10px;  
+            }
+        }
+    }
+}

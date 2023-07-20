@@ -1,8 +1,8 @@
 import "./style.scss";
 import { ryanRoutes, portfolioPath, I_children } from "@/Ryan/configs/routes";
 import DisplayEle from "./components/display-ele";
-import Topbar from "./components/topbar";
-import Footer from "./components/footer";
+import Topbar from "@/Ryan/components/topbar";
+import Footer from "@/Ryan/components/footer";
 import { c_objSort } from "@/Ryan/utils";
 
 const MainDisplayPage: React.FC = () => {
