@@ -6,6 +6,7 @@ const SliderContinuousPage = React.lazy(() => import("@/Ryan/pages/slider-contin
 const SliderSplitImagePage = React.lazy(() => import("@/Ryan/pages/slider-split-image-page"));
 const ExpandingFlexCardsPage = React.lazy(() => import("@/Ryan/pages/expanding-flex-cards-page"));
 const CustomBtnPage = React.lazy(() => import("@/Ryan/pages/custom-btn-page"));
+const CornerFontImgPage = React.lazy(() => import("@/Ryan/pages/corner-font-img-page"));
 
 
 import ThreeFiberShirtImg from "@/Ryan/assets/routeImg/ThreeFiberShirt.png";
@@ -60,6 +61,15 @@ export const ryanRoutes: T_ryanRoutes[] = [
         description: "Custom Btn Page description",
         href: "/CustomBtnPage",
         element: <CustomBtnPage />,
+        displayImg:
+          "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
+      },
+      {
+        index: 5,
+        title: "CornerFontImgPage",
+        description: "CornerFontImgPage description",
+        href: "/CornerFontImgPage",
+        element: <CornerFontImgPage />,
         displayImg:
           "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
       },
